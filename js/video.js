@@ -19,12 +19,12 @@ function pauseVid() {
 }
 
 function slow() {
-    vid.playbackRate = 0.95;
+    vid.playbackRate = 0.95 * vid.playbackRate;
     console.log(vid.playbackRate);
 }
 
 function fast() {
-    vid.playbackRate = 1.05;
+    vid.playbackRate = 1.05 * vid.playbackRate;
     console.log(vid.playbackRate);
     
 }
