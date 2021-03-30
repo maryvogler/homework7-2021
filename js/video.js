@@ -50,10 +50,10 @@ document.querySelector("#skip").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	if (vid.muted == true) {
         vid.muted = false;
-        document.getElementById('mute').innerHTML = 'Unmuted';
+        document.getElementById('mute').innerHTML = 'Mute';
     } else {
         vid.muted = true;
-        document.getElementById('mute').innerHTML = 'Muted'
+        document.getElementById('mute').innerHTML = 'Unmute'
 
     }
 
