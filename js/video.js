@@ -61,8 +61,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 
 slider.addEventListener("input", function() {
-    document.getElementById('volume') = this.value + 10;
-    vid.volume = this.value + 10;
+    vid.volume = vid.volume + 10;
     document.getElementById('volume').innerHTML = vid.volume + "%";
   });
 
