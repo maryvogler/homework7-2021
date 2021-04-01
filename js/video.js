@@ -57,11 +57,16 @@ document.querySelector("#mute").addEventListener("click", function() {
  });
 
 
-document.querySelector("input").addEventListener("mousemove", function() {
+document.querySelector("input").addEventListener("mouseup", function() {
     vid.volume = vid.volume + 10;
     document.getElementById('volume').innerHTML = vid.volume + "%";
   });
 
+document.querySelector("input").addEventListener("mousedown", function() {
+    vid.volume = vid.volume - 10;
+    document.getElementById('volume').innerHTML = vid.volume + "%";
+  });
+  
 document.querySelector("#vintage").addEventListener("click", function() {
 
     console.log('Change CSS');
