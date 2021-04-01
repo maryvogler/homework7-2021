@@ -31,8 +31,8 @@ document.querySelector("#play").addEventListener("click", function() {
  });
 
 document.querySelector("#skip").addEventListener("click", function() {
+    vid.currentTime = vid.currentTime + 15;
     if (vid.currentTime < vid.duration) {
-        vid.currentTime = vid.currentTime + 15;
         console.log("Skip ahead: " + vid.currentTime);
         vid.play();
     } else {
@@ -66,7 +66,7 @@ document.querySelector("input").addEventListener("mousedown", function() {
     vid.volume = vid.volume - 10;
     document.getElementById('volume').innerHTML = vid.volume + "%";
   });
-  
+
 document.querySelector("#vintage").addEventListener("click", function() {
 
     console.log('Change CSS');
