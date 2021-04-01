@@ -36,11 +36,11 @@ document.querySelector("#skip").addEventListener("click", function() {
     var end = vid.duration;
     if ((end - start) > 15) {
         vid.currentTime = vid.currentTime + 15;
-        console.log(vid.currentTime);
+        console.log("Skip ahead: " + vid.currentTime);
         vid.play();
     } else {
         vid.currentTime = 0;
-        console.log(vid.currentTime);
+        console.log("Skip ahead: " + vid.currentTime);
         vid.play();
     }
 
