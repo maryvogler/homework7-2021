@@ -31,9 +31,7 @@ document.querySelector("#play").addEventListener("click", function() {
  });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	var start = vid.currentTime;
-    var end = vid.duration;
-    if ((end - start) > 15) {
+    if (vid.currentTime < vid.duration) {
         vid.currentTime = vid.currentTime + 15;
         console.log("Skip ahead: " + vid.currentTime);
         vid.play();
@@ -59,7 +57,7 @@ document.querySelector("#mute").addEventListener("click", function() {
  });
 
 
-document.addEventListener("input", function() {
+document.querySelector("input").addEventListener("mousemove", function() {
     vid.volume = vid.volume + 10;
     document.getElementById('volume').innerHTML = vid.volume + "%";
   });
