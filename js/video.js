@@ -57,15 +57,12 @@ document.querySelector("#mute").addEventListener("click", function() {
  });
 
 
-document.querySelector("input").addEventListener("mouseup", function() {
-    vid.volume = vid.volume + 10;
-    document.getElementById('volume').innerHTML = vid.volume + "%";
+document.querySelector("#slider").addEventListener("change", function() {
+    var volume = this.value;
+    vid.volume = volume / 100;
+    document.getElementById('volume').innerHTML = (vid.volume * 100) + "%";
   });
 
-document.querySelector("input").addEventListener("mousedown", function() {
-    vid.volume = vid.volume - 10;
-    document.getElementById('volume').innerHTML = vid.volume + "%";
-  });
 
 document.querySelector("#vintage").addEventListener("click", function() {
 
