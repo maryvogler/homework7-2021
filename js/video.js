@@ -1,6 +1,5 @@
 var vid = document.getElementById('player1')
 
-var slider = document.querySelector("#slider")
 
 
 window.addEventListener("load", function() {
@@ -60,7 +59,7 @@ document.querySelector("#mute").addEventListener("click", function() {
  });
 
 
-slider.addEventListener("input", function() {
+document.addEventListener("input", function() {
     vid.volume = vid.volume + 10;
     document.getElementById('volume').innerHTML = vid.volume + "%";
   });
